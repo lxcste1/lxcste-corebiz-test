@@ -62,19 +62,10 @@ export default function ProductCard( product ) {
                 <Box mt={`10px`}>
                     <Text fontWeight={`bold`} fontSize={`18px`}>Por: ${product.attributes.price}</Text>
                 </Box>
-                <Box>
+                <Box h={`17px`}>
                     {hasInstallments && <Text p={0} fontSize={`11px`} color={`#7A7A7A`}>O en {product.attributes.installments[0].quantity}x de ${product.attributes.installments[0].value}</Text>}
                 </Box>
-                {isMobile.width < 797 && 
-                    <Button 
-                        bg={`#000`} 
-                        borderRadius={`5px`}
-                        color={`#fff`}
-                        fontWeight={`bold`}
-                        alignItems={`center`}>
-                            COMPRAR
-                    </Button>}
-                {isShow && 
+                <Box>
                     <Button 
                         bg={`#000`}
                         borderRadius={`5px`}
@@ -82,11 +73,10 @@ export default function ProductCard( product ) {
                         fontWeight={`bold`}
                         alignItems={`center`}
                         _hover={{backgroundColor:`#000`, color:`#fff`}}
-                        position={`absolute`}
-                        bottom={0}
                         marginBottom={`10px`}>
-                        COMPRAR
-                    </Button>}
+                            COMPRAR
+                    </Button>
+                </Box>
             </Box>
         </Flex>
     )

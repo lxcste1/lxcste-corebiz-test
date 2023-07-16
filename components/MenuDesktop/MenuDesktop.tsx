@@ -1,4 +1,5 @@
 "use client"
+
 import { Flex, Box } from "@chakra-ui/layout"
 import { Text, Input, InputGroup, InputRightElement } from "@chakra-ui/react"
 import { SearchIcon } from "@chakra-ui/icons"
