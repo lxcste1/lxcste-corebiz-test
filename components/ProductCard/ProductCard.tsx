@@ -7,14 +7,14 @@ import { Button } from "@chakra-ui/button"
 import GetSize from "../../hooks/GetSize/GetSize"
 
 export default function ProductCard( product ) {
-    
+
     const isOnDiscount = product.attributes.listPrice != null
     const hasInstallments = product.attributes.installments.length > 0
     const [isShow, setIsShow] = useState(false);
     const isMobile = GetSize();
 
     return (
-        <Flex w={[`50%`,`23%`]} flexDir={`column`} justifyContent={`center`} alignItems={`center`}>
+        <Flex w={[`50%`,`23%`]} my={`10px`} flexDir={`column`} justifyContent={`center`} alignItems={`center`}>
             <Box position={`relative`} w={`100%`}>
                 {isOnDiscount ? 
                     <Box position={`absolute`} right={0} w={0} h={0} borderStyle={`solid`} borderWidth={`0 70px 70px 0`} borderColor={`transparent #F8475F transparent transparent`}>
