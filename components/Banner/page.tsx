@@ -31,19 +31,21 @@ export default function Banner() {
                             Crear o migrar tu comercio electrónico?
                         </Heading>
                     </Box>
-                    <Box w={`100%`}>
+                    <Box w={`100%`} m={`auto`}>
                         {isMobile.width < 797 ? 
                             <Image 
                                 src={`/banner-1_mobile.png`}
                                 alt={`Main banner 1`}
                                 width={415}
                                 height={208}
+                                style={{margin:`auto`}}
                             /> :
                             <Image 
                                 src={`/banner-1_desktop.png`}
                                 alt={`Main banner 1`}
                                 width={1600}
                                 height={533}
+                                style={{margin:`auto`}}
                             /> }                       
                     </Box>
                 </Flex>
