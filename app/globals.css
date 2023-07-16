@@ -1,7 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Nunito" !important;
+}
+
+.slick-dots {
+  bottom: 20px !important;
+}
+
+.slick-dots li {
+  margin: 0 !important;
+}
+
+.slick-dots li button:before {
+  font-size: 13px !important;
+  color: #fff !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #f8475f !important;
 }
