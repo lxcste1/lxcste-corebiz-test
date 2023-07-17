@@ -34,12 +34,12 @@ export default function ProductCard( product ) {
                 onMouseLeave={() => setIsShow(false)}
                 _hover={{backgroundColor: `#eee`}}
                 width={`100%`}
-                height={`170px`}
+                height={`180px`}
                 display={`flex`}
                 flexDir={`column`}
                 flexWrap={`wrap`}
                 alignItems={`center`}
-                justifyContent={[`space-between`,`unset`]}
+                justifyContent={[`space-between`,`space-around`]}
                 position={`relative`}>
                 <Text
                     w={`fit-content`}
