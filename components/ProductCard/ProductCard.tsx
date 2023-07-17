@@ -1,17 +1,14 @@
 "use client"
 
-import React, { useState, useRef } from "react"
+import React from "react"
 import { Flex, Box, Badge, Text } from "@chakra-ui/layout"
 import Image from "next/image"
 import { Button } from "@chakra-ui/button"
-import GetSize from "../../hooks/GetSize/GetSize"
 
 export default function ProductCard( product ) {
 
-    const isOnDiscount = product.attributes.listPrice != null
-    const hasInstallments = product.attributes.installments.length > 0
-    const [isShow, setIsShow] = useState(false);
-    const isMobile = GetSize();
+    const isOnDiscount = product.attributes.listPrice != null // Variable generada para detectar si el producto se encuentra en descuento
+    const hasInstallments = product.attributes.installments.length > 0 // Variable generada para detectar si el producto ofrece cuotas
 
     return (
         <Flex w={[`50%`,`23%`]} my={`10px`} flexDir={`column`} justifyContent={`center`} alignItems={`center`}>
@@ -30,8 +27,6 @@ export default function ProductCard( product ) {
                 />
             </Box>
             <Box 
-                onMouseEnter={() => setIsShow(true)}
-                onMouseLeave={() => setIsShow(false)}
                 _hover={{backgroundColor: `#eee`}}
                 width={`100%`}
                 height={`180px`}
