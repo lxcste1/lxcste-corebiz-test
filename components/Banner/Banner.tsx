@@ -49,33 +49,6 @@ export default function Banner() {
                             /> }                       
                     </Box>
                 </Flex>
-                <Flex position={`relative`} w={`100%`}>
-                    <Box position={`absolute`} h={`100%`} w={[`100%`, `400px`]} mx={[`unset`, `10rem`]} px={[`1.5rem`, `unset`]} display={`flex`} flexDirection={`column`} justifyContent={`center`}>
-                        <Heading color={`#FFFFFF`} fontFamily={`Nunito`} fontSize={`20px`} mb={`1rem`}>
-                            ¡Hola! ¿Qué es lo que buscas?
-                        </Heading>
-                        <Heading color={`#FFFFFF`} fontFamily={`Nunito`} fontWeight={`800`}>
-                            Crear o migrar tu comercio electrónico?
-                        </Heading>
-                    </Box>
-                    <Box w={`100%`}>
-                        {isMobile.width < 797 ? 
-                            <Image 
-                                src={`/banner-1_mobile.png`}
-                                alt={`Main banner 1`}
-                                width={415}
-                                height={208}
-                                style={{margin:`auto`}}
-                            /> :
-                            <Image 
-                                src={`/banner-1_desktop.png`}
-                                alt={`Main banner 1`}
-                                width={1600}
-                                height={533}
-                                style={{margin:`auto`}}
-                            /> }                       
-                    </Box>
-                </Flex>
             </Slider>            
         </Box>
 
