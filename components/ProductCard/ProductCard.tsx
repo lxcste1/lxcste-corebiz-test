@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import StarRating from "../StarRating/StarRating"
 import { Flex, Box, Badge, Text } from "@chakra-ui/layout"
 import Image from "next/image"
 import { Button } from "@chakra-ui/button"
@@ -9,6 +10,7 @@ export default function ProductCard( product ) {
 
     const isOnDiscount = product.attributes.listPrice != null // Variable generada para detectar si el producto se encuentra en descuento
     const hasInstallments = product.attributes.installments.length > 0 // Variable generada para detectar si el producto ofrece cuotas
+    const stars = product.attributes.stars
 
     return (
         <Flex w={[`50%`,`23%`]} my={`10px`} flexDir={`column`} justifyContent={`center`} alignItems={`center`}>
@@ -44,6 +46,9 @@ export default function ProductCard( product ) {
                     textAlign={`center`}>
                         {product.attributes.productName}
                 </Text>
+                <Box>
+                    <StarRating rating={stars} />
+                </Box>
                 <Box h={`20px`}>
                     {isOnDiscount &&
                         <Text
@@ -54,7 +59,7 @@ export default function ProductCard( product ) {
                                 De: ${product.attributes.listPrice}
                         </Text>}
                 </Box>
-                <Box mt={`10px`}>
+                <Box>
                     <Text fontWeight={`bold`} fontSize={`18px`}>Por: ${product.attributes.price}</Text>
                 </Box>
                 <Box h={`17px`}>

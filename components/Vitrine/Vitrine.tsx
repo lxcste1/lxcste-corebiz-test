@@ -17,7 +17,6 @@ export default function Vitrine() {
         <Box py={[`1rem`,`2rem`]} px={[`1.5rem`, ``]}>
             <Flex maxW={[`100%`, `75rem`]} m={`auto`} px={[`unset`, 6]} justifyContent={`space-between`} flexWrap={`wrap`}> 
                 {data?.map((product)=>{
-                    console.log(product)
                     return <ProductCard attributes={product} key={product.productId} />
                 })}                
             </Flex>
