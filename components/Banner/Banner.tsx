@@ -21,9 +21,9 @@ export default function Banner() {
 
     return (
         <Box w={`100%`} overflow={`hidden`}>
-            <Slider {...settings} m={`unset`} w={`100%`}>
+            <Slider {...settings}>
                 <Flex position={`relative`} w={`100%`}>
-                    <Box position={`absolute`} h={`100%`} w={[`100%`, `400px`]} mx={[`unset`, `10rem`]} px={[`1.5rem`, `unset`]} display={`flex`} flexDirection={`column`} justifyContent={`center`}>
+                    <Box position={`absolute`} left={[``,`90px`]} h={`100%`} w={[`100%`, `400px`]} mx={[`unset`, `10rem`]} px={[`1.5rem`, `unset`]} display={`flex`} flexDirection={`column`} justifyContent={`center`}>
                         <Heading color={`#FFFFFF`} fontFamily={`Nunito`} fontSize={`20px`} mb={`1rem`}>
                             ¡Hola! ¿Qué es lo que buscas?
                         </Heading>
@@ -65,12 +65,14 @@ export default function Banner() {
                                 alt={`Main banner 1`}
                                 width={415}
                                 height={208}
+                                style={{margin:`auto`}}
                             /> :
                             <Image 
                                 src={`/banner-1_desktop.png`}
                                 alt={`Main banner 1`}
                                 width={1600}
                                 height={533}
+                                style={{margin:`auto`}}
                             /> }                       
                     </Box>
                 </Flex>
